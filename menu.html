@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Autogestión - Andreani</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <header class="menu-header">
+        <img src="https://www.andreani.com/img/logo-andreani.svg" alt="Logo" class="mini-logo">
+        <h2>¿Qué necesitás hacer hoy?</h2>
+    </header>
+
+    <main class="options-grid">
+        <button class="menu-card" onclick="alert('Iniciando Retiro...')">
+            <div class="icon">📦</div>
+            <h3>Retirar Envío</h3>
+            <p>Tengo un paquete para retirar</p>
+        </button>
+
+        <button class="menu-card red-card" onclick="alert('Iniciando Despacho...')">
+            <div class="icon">🚚</div>
+            <h3>Hacer un Envío</h3>
+            <p>Quiero despachar un paquete</p>
+        </button>
+
+        <button class="menu-card dark-card" onclick="alert('Iniciando Compra...')">
+            <div class="icon">🛒</div>
+            <h3>Comprar Insumos</h3>
+            <p>Cajas, sobres y cintas</p>
+        </button>
+    </main>
+
+    <footer class="menu-footer">
+        <button onclick="location.href='index.html'" class="btn-back">← Volver al inicio</button>
+    </footer>
+</body>
+</html>

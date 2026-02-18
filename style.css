@@ -76,3 +76,39 @@ p {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
 }
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px;
+    height: 60vh;
+}
+
+.menu-card {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.menu-card:active { transform: scale(0.95); }
+
+.menu-card h3 { font-size: 2rem; margin: 10px 0; color: var(--gris-oscuro); }
+
+.red-card { border-bottom: 10px solid var(--rojo-andreani); }
+.dark-card { border-bottom: 10px solid #000; }
+
+.btn-back {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+}
