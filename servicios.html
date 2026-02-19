@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Servicios - Andreani</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <header class="menu-header">
+        <img src="https://www.andreani.com/img/logo-andreani.svg" alt="Logo" class="mini-logo">
+        <h2>¿Qué necesitás enviar?</h2>
+    </header>
+
+    <main class="options-grid">
+        <div class="service-card" onclick="selectService('Paquetería')">
+            <div class="service-img">📦</div>
+            <h3>Paquetería</h3>
+            <p>Hasta 50 kg</p>
+            <span class="btn-select">Seleccionar</span>
+        </div>
+
+        <div class="service-card" onclick="selectService('Sobre')">
+            <div class="service-img">✉️</div>
+            <h3>Sobre</h3>
+            <p>Hasta 500 g</p>
+            <span class="btn-select">Seleccionar</span>
+        </div>
+
+        <div class="service-card" onclick="selectService('Carta Documento')">
+            <div class="service-img">📄</div>
+            <h3>Carta Documento</h3>
+            <p>Comunicación legal</p>
+            <span class="btn-select">Seleccionar</span>
+        </div>
+    </main>
+
+    <div id="overlay" class="overlay">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h3>Iniciando autogestión para <span id="service-name"></span>...</h3>
+            <p>Por favor, no retires la mirada de la pantalla.</p>
+        </div>
+    </div>
+
+    <footer class="menu-footer">
+        <button onclick="location.href='menu.html'" class="btn-back">← Volver</button>
+    </footer>
+
+    <script>
+        function selectService(name) {
+            document.getElementById('service-name').innerText = name;
+            document.getElementById('overlay').style.display = 'flex';
+            
+            // Simulamos la derivación al sistema de autogestión después de 3 segundos
+            setTimeout(() => {
+                alert('Aquí el sistema se conectaría con la interfaz de pesaje y etiquetado de Andreani.');
+                location.href = 'index.html'; // Volver al inicio tras la "gestión"
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
